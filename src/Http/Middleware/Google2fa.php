@@ -24,7 +24,7 @@ class Google2fa
      */
     public function handle($request, Closure $next)
     {
-        if (!config('lifeonscreen2fa.enabled')) {
+        if (!config('screen2fa.enabled')) {
             return $next($request);
         }
         if ($request->path() === 'los/2fa/confirm' || $request->path() === 'los/2fa/authenticate'
