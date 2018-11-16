@@ -8,7 +8,7 @@ Copy code bellow to migrations folder and run migrations:
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Lifeonscreen\Google2fa\Models\User2fa;
+use CarlosCGO\Google2fa\Models\User2fa;
 
 class HashGoogle2faRecoveryCodes extends Migration
 {
