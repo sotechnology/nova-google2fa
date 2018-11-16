@@ -1,6 +1,6 @@
 <?php
 
-namespace Lifeonscreen\Google2fa\Models;
+namespace CarlosCGO\Google2fa\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +23,6 @@ class User2fa extends Model
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(config('lifeonscreen2fa.models.user'));
+        return $this->belongsTo(config('screen2fa.models.user'));
     }
 }
