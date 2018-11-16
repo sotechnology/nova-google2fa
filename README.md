@@ -41,13 +41,13 @@ Upgrade guide is available [Here](docs/upgrade_to_1.0.0.md').
 Install via composer
 
 ``` bash
-$ composer require lifeonscreen/nova-google2fa
+$ composer require carloscgo/nova-google2fa
 ```
 
 Publish config and migrations
 
 ``` bash
-$ php artisan vendor:publish --provider="Lifeonscreen\Google2fa\ToolServiceProvider"
+$ php artisan vendor:publish --provider="CarlosCGO\Google2fa\ToolServiceProvider"
 ```
 
 Run migrations
@@ -58,7 +58,7 @@ $ php artisan migrate
 
 Add relation to User model
 ```php
-use Lifeonscreen\Google2fa\Models\User2fa;
+use CarlosCGO\Google2fa\Models\User2fa;
 
 ...
 
@@ -77,7 +77,7 @@ Add middleware to `nova.config`.
     ...
     'middleware' => [
         ...
-        \Lifeonscreen\Google2fa\Http\Middleware\Google2fa::class,
+        \CarlosCGO\Google2fa\Http\Middleware\Google2fa::class,
         ...
     ],
 ]
