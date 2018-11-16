@@ -1,10 +1,10 @@
 <?php
 
-namespace Lifeonscreen\Google2fa;
+namespace CarlosCGO\Google2fa;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Lifeonscreen\Google2fa\Http\Middleware\Authorize;
+use CarlosCGO\Google2fa\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,7 @@ class ToolServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Publishing the configuration file.
             $this->publishes([
-                __DIR__ . '/../config/lifeonscreen2fa.php' => config_path('lifeonscreen2fa.php'),
+                __DIR__ . '/../config/screen2fa.php' => config_path('screen2fa.php'),
             ], 'lifeonscreen2fa.config');
 
             // Publishing the migrations.
@@ -58,6 +58,6 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/lifeonscreen2fa.php', 'lifeonscreen2fa');
+        $this->mergeConfigFrom(__DIR__ . '/../config/screen2fa.php', 'screen2fa');
     }
 }
