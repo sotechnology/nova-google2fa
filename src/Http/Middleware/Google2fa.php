@@ -1,6 +1,6 @@
 <?php
 
-namespace Lifeonscreen\Google2fa\Http\Middleware;
+namespace CarlosCGO\Google2fa\Http\Middleware;
 
 use Closure;
 use Lifeonscreen\Google2fa\Google2FAAuthenticator;
@@ -10,7 +10,7 @@ use PragmaRX\Recovery\Recovery;
 
 /**
  * Class Google2fa
- * @package Lifeonscreen\Google2fa\Http\Middleware
+ * @package CarlosCGO\Google2fa\Http\Middleware
  */
 class Google2fa
 {
@@ -41,9 +41,9 @@ class Google2fa
             $recovery = new Recovery();
             $secretKey = $google2fa->generateSecretKey();
             $data['recovery'] = $recovery
-                ->setCount(config('lifeonscreen2fa.recovery_codes.count'))
-                ->setBlocks(config('lifeonscreen2fa.recovery_codes.blocks'))
-                ->setChars(config('lifeonscreen2fa.recovery_codes.chars_in_block'))
+                ->setCount(config('screen2fa.recovery_codes.count'))
+                ->setBlocks(config('screen2fa.recovery_codes.blocks'))
+                ->setChars(config('screen2fa.recovery_codes.chars_in_block'))
                 ->toArray();
 
             User2fa::where('user_id', auth()->user()->id)->delete();
