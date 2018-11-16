@@ -4,7 +4,7 @@ This package enforces 2FA for Laravel Nova.
 
 ## Upgrade from 0.0.7 to 1.0.0
 
-Upgrade guide is available [Here](docs/upgrade_to_1.0.0.md').
+Upgrade guide is available [Here](docs/upgrade_to_1.0.0.md).
 
 ## Flow
 
