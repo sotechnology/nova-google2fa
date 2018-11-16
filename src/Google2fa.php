@@ -1,9 +1,9 @@
 <?php
 
-namespace Lifeonscreen\Google2fa;
+namespace CarlosCGO\Google2fa;
 
 use Laravel\Nova\Tool;
-use Lifeonscreen\Google2fa\Models\User2fa;
+use CarlosCGO\Google2fa\Models\User2fa;
 use PragmaRX\Google2FA\Google2FA as G2fa;
 use PragmaRX\Recovery\Recovery;
 use Request;
@@ -113,14 +113,14 @@ class Google2fa extends Tool
             $recovery = new Recovery();
             $secretKey = $google2fa->generateSecretKey();
             $data['recovery'] = $recovery
-                ->setCount(config('lifeonscreen2fa.recovery_codes.count'))
-                ->setBlocks(config('lifeonscreen2fa.recovery_codes.blocks'))
-                ->setChars(config('lifeonscreen2fa.recovery_codes.chars_in_block'))
+                ->setCount(config('screen2fa.recovery_codes.count'))
+                ->setBlocks(config('screen2fa.recovery_codes.blocks'))
+                ->setChars(config('screen2fa.recovery_codes.chars_in_block'))
                 ->toArray();
 
             $recoveryHashes = $data['recovery'];
             array_walk($recoveryHashes, function (&$value) {
-                $value = password_hash($value, config('lifeonscreen2fa.recovery_codes.hashing_algorithm'));
+                $value = password_hash($value, config('screen2fa.recovery_codes.hashing_algorithm'));
             });
 
             User2fa::where('user_id', auth()->user()->id)->delete();
