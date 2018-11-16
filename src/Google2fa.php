@@ -32,7 +32,7 @@ class Google2fa extends Tool
         $google2fa = new G2fa();
         $google2fa->setAllowInsecureCallToGoogleApis(true);
 
-        return $google2fa->verifyKey(auth()->user()->user2fa->google2fa_secret, $secret);
+        return $google2fa->verifyKey(auth()->user()->user2fa->google2fa_secret, $secret, config('google2fa.window'));
     }
 
     /**
