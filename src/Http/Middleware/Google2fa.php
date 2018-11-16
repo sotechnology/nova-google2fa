@@ -3,8 +3,8 @@
 namespace CarlosCGO\Google2fa\Http\Middleware;
 
 use Closure;
-use Lifeonscreen\Google2fa\Google2FAAuthenticator;
-use Lifeonscreen\Google2fa\Models\User2fa;
+use CarlosCGO\Google2fa\Google2FAAuthenticator;
+use CarlosCGO\Google2fa\Models\User2fa;
 use PragmaRX\Google2FA\Google2FA as G2fa;
 use PragmaRX\Recovery\Recovery;
 
