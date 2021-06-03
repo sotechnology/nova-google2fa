@@ -1,6 +1,16 @@
-## CarlosCGO/nova-google2fa
+## Forked from CarlosCGO/nova-google2fa
 
 This package enforces 2FA for Laravel Nova.
+
+Had to fork this as no other package available that makes it compatible with PHP 7.4
+
+The main issue was
+
+pragmarx/google2fa-laravel: ^0.2.0
+
+This needed updating
+
+Original docs below
 
 ## Upgrade from 0.0.7 to 1.0.0
 
