@@ -1,6 +1,6 @@
 {
     "name": "sotechnology/nova-google2fa",
-    "description": "Fork of carloscgo/nova-google2fa to make compatibole with PHP 7.4",
+    "description": "Fork of carloscgo/nova-google2fa to make compatible with PHP 7.4",
     "keywords": [
         "laravel",
         "nova"
